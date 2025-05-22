@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+
+    <title>DExpense tracker</title>
+</head>
+<body>
+    <div style="background:#f9f9f9; padding:20px; border-radius:10px;background: #82e7ec;
+  margin-top:20px;">
+
+    <h2>Expense Tracker</h2>
+  <form id="transactionForm">
+    <input type="text" id="description" placeholder="Description of expense" />
+    <br>
+    <input type="number" id="amount" placeholder="Amount" required />    <br>
+
+    <select id="type">
+      <option value="credit">Credit</option>
+      <option value="debit">Debit</option>
+    </select>    <br>
+
+    <button type="submit">Add</button>
+  </form>
+
+  <div class="balance">Expense:RS=<span id="balance">0</span></div>
+
+  <table style="width: 90%;" id="transactionsTable">
+  <thead>
+    <tr>
+      <th style="text-align:center;">Description</th>
+      <th style="text-align:center;">Amount</th>
+     <th style="text-align:center;">Category</th> 
+      <th style="text-align:center;">Actions</th>
+    </tr>
+  </thead>
+  <tbody id="transactionsBody">
+  </tbody>
+</table>
+
+      <script src="script.js"></script>
+  </div>
+</body>
+</html>
